@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bteam-utils"
+version = "0.1.0"
+dependencies = [
+    "pandas",
+    "holidays",     # XML操作で必要なら追加
+    "requests"  # 他に使っているものがあれば追加
+]
+
+[tool.setuptools]
+packages = ["bteam_utils"]
