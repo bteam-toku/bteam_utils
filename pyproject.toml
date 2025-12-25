@@ -7,8 +7,7 @@ name = "bteam-utils"
 version = "0.1.0"
 dependencies = [
     "pandas",
-    "holidays",     # XML操作で必要なら追加
-    "requests"  # 他に使っているものがあれば追加
+    "holidays",
 ]
 
 [tool.setuptools]
