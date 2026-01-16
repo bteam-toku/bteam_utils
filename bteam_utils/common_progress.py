@@ -22,20 +22,20 @@ class CommonProgress:
         self._total = total
         self._current = 0
         self._display_type = display_type
-        self.update(increment=0, task_msg=task_msg, status_msg=status_msg)
+        self.update(current=0, task_msg=task_msg, status_msg=status_msg)
 
     #
     # public methods
     #
-    def update(self,  increment: int = 1, task_msg:str = "", status_msg:str = "") -> None:
+    def update(self,  current: int = -1, task_msg:str = "", status_msg:str = "") -> None:
         """進捗情報更新
         Args:
-            increment (int): 現在数の増分
+            current (int): 現在数（指定なしの場合は自動インクリメント）
             task_msg (str): タスクメッセージ
             status_msg (str): 状態メッセージ
         """
         # 情報更新
-        self._current += increment
+        self._current = current if current >= 0 else (self._current + 1)
         self._task_msg = task_msg if task_msg else self._task_msg
         self._status_msg = status_msg if status_msg else self._status_msg
         # 表示更新
