@@ -61,7 +61,7 @@ class CommonProgress:
         [#########################-------------------------] 50% | Task Message : Status Message
         """
         # 進捗率計算
-        ratio = (self._current / self._total) * 100 if self._total > 0 else 100
+        ratio = int((self._current / self._total) * 100) if self._total > 0 else 100
         # 表示ブロック数計算
         display_block_num = 50
         current_block = int((ratio * display_block_num) / 100)
