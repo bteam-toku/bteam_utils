@@ -40,6 +40,16 @@ class CommonProgress:
         self._status_msg = status_msg if status_msg else self._status_msg
         # 表示更新
         self.display()
+    
+    def complete(self, status_msg: str = "Completed") -> None:
+        """進捗完了処理
+        Args:
+            status_msg (str): 状態メッセージ
+        """
+        # 最終更新
+        self.update(current=self._total, status_msg=status_msg)
+        # 改行表示(完了時)
+        print()
 
     def display(self) -> None:
         """進捗表示
@@ -69,7 +79,4 @@ class CommonProgress:
         display_bar = '[' + '#' * current_block + '-' * (display_block_num - current_block) + ']'
         display_output = f"\r{display_bar} {ratio:3}% | {self._task_msg} : {self._status_msg}"
         print(f"{display_output:<100}", end="", flush=True)
-        # 改行処理
-        if ratio >= 100:
-            print()
 
