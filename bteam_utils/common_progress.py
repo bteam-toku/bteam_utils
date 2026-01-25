@@ -78,5 +78,5 @@ class CommonProgress:
         # 進捗表示
         display_bar = '[' + '#' * current_block + '-' * (display_block_num - current_block) + ']'
         display_output = f"\r{display_bar} {ratio:3}% | {self._task_msg} : {self._status_msg}"
-        print(f"{display_output:<100}", end="", flush=True)
+        print(f"{display_output[:150]:<150}", end="", flush=True)
 
