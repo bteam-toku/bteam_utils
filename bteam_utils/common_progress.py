@@ -1,3 +1,5 @@
+import shutil
+
 class CommonProgress:
     """共通進捗表示クラス
     """
@@ -70,13 +72,15 @@ class CommonProgress:
         表示形式は以下の通り
         [#########################-------------------------] 50% | Task Message : Status Message
         """
+        # 横幅計算
+        cols, _ = shutil.get_terminal_size(fallback=(100, 24))
+        width = cols - 1
         # 進捗率計算
         ratio = int((self._current / self._total) * 100) if self._total > 0 else 100
         # 表示ブロック数計算
-        display_block_num = 50
+        display_block_num = 33
         current_block = int((ratio * display_block_num) / 100)
         # 進捗表示
         display_bar = '[' + '#' * current_block + '-' * (display_block_num - current_block) + ']'
         display_output = f"\r{display_bar} {ratio:3}% | {self._task_msg} : {self._status_msg}"
-        print(f"{display_output[:150]:<150}", end="", flush=True)
-
+        print(f"{display_output[:width]:<{width}}", end="", flush=True)
