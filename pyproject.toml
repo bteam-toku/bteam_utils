@@ -5,10 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bteam-utils"
 version = "0.1.0"
-dependencies = [
-    "pandas",
-    "holidays",
-]
+dependencies = ["pandas", "holidays"]
 
 [tool.setuptools]
-packages = ["bteam_utils"]
+packages = ["bteam_utils", "bteam_utils.common_prohibit_replacer"]
