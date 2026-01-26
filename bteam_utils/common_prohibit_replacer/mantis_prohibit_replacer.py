@@ -1,6 +1,6 @@
 from common_prohibit_replacer import BaseProhibitReplacer
 
-class DefaultMantisProhibitReplacer(BaseProhibitReplacer):
+class MantisProhibitReplacer(BaseProhibitReplacer):
     """ Mantisの禁則文字を置換するクラス
     """
     #
