@@ -1,4 +1,4 @@
-from common_prohibit_replacer import BaseProhibitReplacer
+from .base_prohibit_replacer import BaseProhibitReplacer
 
 class MantisProhibitReplacer(BaseProhibitReplacer):
     """ Mantisの禁則文字を置換するクラス

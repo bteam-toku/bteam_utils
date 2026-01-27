@@ -1,4 +1,4 @@
-from common_prohibit_replacer import BaseProhibitReplacer
+from .base_prohibit_replacer import BaseProhibitReplacer
 
 class PathProhibitReplacer(BaseProhibitReplacer):
     """ パスの禁則文字と予約語を置換するクラス

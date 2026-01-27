@@ -1,4 +1,4 @@
-from common_prohibit_replacer import AbstractProhibitReplacer
+from .abstract_prohibit_replacer import AbstractProhibitReplacer
 
 class BaseProhibitReplacer(AbstractProhibitReplacer):
     """ 禁則文字列置換基底クラス
