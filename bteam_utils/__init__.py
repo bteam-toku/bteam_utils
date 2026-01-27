@@ -2,6 +2,8 @@ from .common_xml import CommonXML
 from .common_calendar import CommonCalendar
 from .common_evm import CommonEVM
 from .common_progress import CommonProgress
+from .common_prohibit_replacer import AbstractProhibitReplacer
+from .common_prohibit_replacer import BaseProhibitReplacer
 from .common_prohibit_replacer import PathProhibitReplacer
 from .common_prohibit_replacer import TeamsProhibitReplacer
 from .common_prohibit_replacer import RedmineProhibitReplacer

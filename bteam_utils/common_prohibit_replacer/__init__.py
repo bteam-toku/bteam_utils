@@ -1,3 +1,4 @@
+from .abstract_prohibit_replacer import AbstractProhibitReplacer
 from .base_prohibit_replacer import BaseProhibitReplacer
 from .path_prohibit_replacer import PathProhibitReplacer
 from .teams_prohibit_replacer import TeamsProhibitReplacer
